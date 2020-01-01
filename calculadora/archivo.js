@@ -13,7 +13,12 @@ function uno() {
 }
 
 function suma() {
-  residuo = pantalla;
+  if (residuo != 0) {
+    residuo = pantalla + residuo;
+  } else {
+    residuo = pantalla;
+  }
+
   pantalla = 0;
   accion = "suma";
 
