@@ -3,11 +3,11 @@ var residuo = 0;
 var accion = "";
 var esResultado = false;
 
-function uno() {
+function numero(n) {
   if (pantalla == 0 || esResultado) {
-    pantalla = 1;
+    pantalla = n;
   } else {
-    pantalla = parseInt(pantalla + "1");
+    pantalla = parseInt(pantalla + "" + n);
   }
 
   esResultado = false;
@@ -16,7 +16,7 @@ function uno() {
 
 function suma() {
   if (residuo != 0) {
-    residuo = pantalla + residuo;
+    residuo = residuo + pantalla;
   } else {
     residuo = pantalla;
   }
@@ -27,12 +27,74 @@ function suma() {
   console.log(pantalla, residuo);
 }
 
+function resta() {
+  if (residuo != 0) {
+    residuo = residuo - pantalla;
+  } else {
+    residuo = pantalla;
+  }
+
+  pantalla = 0;
+  accion = "resta";
+
+  console.log(pantalla, residuo);
+}
+
+function multiplicacion() {
+  if (residuo != 0) {
+    residuo = residuo * pantalla;
+  } else {
+    residuo = pantalla;
+  }
+
+  pantalla = 0;
+  accion = "multiplica";
+
+  console.log(pantalla, residuo);
+}
+
+function dividir() {
+  if (residuo != 0) {
+    residuo = residuo / pantalla;
+  } else {
+    residuo = pantalla;
+  }
+
+  pantalla = 0;
+  accion = "divide";
+
+  console.log(pantalla, residuo);
+}
+
 function igual() {
   if (accion == "suma") {
-    pantalla = pantalla + residuo;
-    residuo = 0;
-    accion = "";
+    pantalla = residuo + pantalla;
   }
+
+  if (accion == "resta") {
+    pantalla = residuo - pantalla;
+  }
+
+  if (accion == "multiplica") {
+    pantalla = residuo * pantalla;
+  }
+
+  if (accion == "divide") {
+    pantalla = residuo / pantalla;
+  }
+
+  residuo = 0;
+  accion = "";
+
   esResultado = true;
   console.log(pantalla, residuo);
+}
+
+function resetear() {
+  pantalla = 0;
+  residuo = 0;
+  accion = "";
+  esResultado = false;
+
+  console.log(pantalla);
 }
