@@ -1,0 +1,87 @@
+body {
+  font-family: "Poppins";
+}
+#c {
+  font-size: 30px;
+}
+
+#resultado {
+  color: #2e5ff8;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.botonesvcios {
+}
+.botonesvcios button:hover {
+  color: white;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.mas-grande {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor {
+  margin-top: 0px;
+  margin-left: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.numeros {
+  flex: 3;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5px;
+  color: white;
+}
+
+.aritmetica {
+  flex: 1;
+  font-size: 0px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.5px;
+  color: white;
+}
+
+.numeros button {
+  width: 24px;
+  margin: 0 auto;
+  font-weight: 600;
+  color: #2e5ff8;
+  background-color: white;
+  border-style: none;
+  border-radius: 20px;
+}
+
+.aritmetica button {
+  width: 24px;
+  font-weight: 100;
+  color: #2e5ff8;
+  background-color: white;
+  border-style: none;
+  border-radius: 20px;
+}
+
+.numeros button:hover {
+  color: white;
+  background-color: #2e5ff8;
+  border-radius: 20px;
+}
+
+.aritmetica button:hover {
+  color: white;
+  background-color: #2e5ff8;
+  border-radius: 20px;
+}

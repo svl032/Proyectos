@@ -1,33 +1,44 @@
 <html>
   <head>
-    <title>Prueba con Angelo y Sebas</title>
+    <title>Calculadora</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
     <link href="archivo.css" rel="stylesheet" />
   </head>
 
   <body>
-    <div class="aritmetica">
-      <button onclick="suma()">+</button>
-      <button onclick="resta()">-</button>
-      <button onclick="multiplicacion()">*</button>
-      <button onclick="dividir()">/</button>
-      <button onclick="resetear()">c</button>
-      <button onclick="igual()">=</button>
-    </div>
-    <div class="numeros">
-      <button onclick="uno()">1</button>
-      <button onclick="dos()">2</button>
-      <button onclick="tres()">3</button>
-      <button onclick="cuatro()">4</button>
-      <button onclick="cinco()">5</button>
-      <button onclick="seis()">6</button>
-      <button onclick="siete()">7</button>
-      <button onclick="ocho()">8</button>
-      <button onclick="nueve()">9</button>
-      <button onclick="cero()">0</button>
-    </div>
+    <div class="mas-grande">
+      <h1 id="resultado">0</h1>
 
-    <h1 id="resultado">0</h1>
+      <div class="contenedor">
+        <div class="numeros">
+          <button id="c" onclick="resetear()">c</button>
+          <button class="botonesvacios"></button>
+          <button class="botonesvacios"></button>
+          <button onclick="siete()">7</button>
+          <button onclick="ocho()">8</button>
+          <button onclick="nueve()">9</button>
+          <button onclick="cuatro()">4</button>
+          <button onclick="cinco()">5</button>
+          <button onclick="seis()">6</button>
+          <button onclick="uno()">1</button>
+          <button onclick="dos()">2</button>
+          <button onclick="tres()">3</button>
+          <button onclick="cero()">0</button>
+        </div>
+
+        <div class="aritmetica">
+          <button onclick="dividir()">/</button>
+          <button onclick="multiplicacion()">x</button>
+          <button onclick="resta()">-</button>
+          <button onclick="suma()">+</button>
+          <button onclick="igual()">=</button>
+        </div>
+      </div>
+    </div>
 
     <script src="archivo.html"></script>
   </body>
