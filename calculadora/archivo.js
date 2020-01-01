@@ -9,7 +9,6 @@ function numero(n) {
   } else {
     pantalla = parseInt(pantalla + "" + n);
   }
-
   esResultado = false;
   console.log(pantalla, residuo);
 }
@@ -20,10 +19,8 @@ function suma() {
   } else {
     residuo = pantalla;
   }
-
   pantalla = 0;
   accion = "suma";
-
   console.log(pantalla, residuo);
 }
 
@@ -33,10 +30,8 @@ function resta() {
   } else {
     residuo = pantalla;
   }
-
   pantalla = 0;
   accion = "resta";
-
   console.log(pantalla, residuo);
 }
 
@@ -46,10 +41,8 @@ function multiplicacion() {
   } else {
     residuo = pantalla;
   }
-
   pantalla = 0;
   accion = "multiplica";
-
   console.log(pantalla, residuo);
 }
 
@@ -59,10 +52,8 @@ function dividir() {
   } else {
     residuo = pantalla;
   }
-
   pantalla = 0;
   accion = "divide";
-
   console.log(pantalla, residuo);
 }
 
@@ -70,22 +61,18 @@ function igual() {
   if (accion == "suma") {
     pantalla = residuo + pantalla;
   }
-
   if (accion == "resta") {
     pantalla = residuo - pantalla;
   }
-
   if (accion == "multiplica") {
     pantalla = residuo * pantalla;
   }
-
   if (accion == "divide") {
     pantalla = residuo / pantalla;
   }
 
   residuo = 0;
   accion = "";
-
   esResultado = true;
   console.log(pantalla, residuo);
 }
@@ -95,6 +82,5 @@ function resetear() {
   residuo = 0;
   accion = "";
   esResultado = false;
-
   console.log(pantalla);
 }
