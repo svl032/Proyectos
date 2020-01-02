@@ -10,7 +10,8 @@ function numero(n) {
     pantalla = parseInt(pantalla + "" + n);
   }
   esResultado = false;
-  console.log(pantalla, residuo);
+
+  imprimirValores();
 }
 
 function suma() {
@@ -21,7 +22,7 @@ function suma() {
   }
   pantalla = 0;
   accion = "suma";
-  console.log(pantalla, residuo);
+  imprimirValores();
 }
 
 function resta() {
@@ -32,7 +33,7 @@ function resta() {
   }
   pantalla = 0;
   accion = "resta";
-  console.log(pantalla, residuo);
+  imprimirValores();
 }
 
 function multiplicacion() {
@@ -43,7 +44,7 @@ function multiplicacion() {
   }
   pantalla = 0;
   accion = "multiplica";
-  console.log(pantalla, residuo);
+  imprimirValores();
 }
 
 function dividir() {
@@ -54,7 +55,14 @@ function dividir() {
   }
   pantalla = 0;
   accion = "divide";
-  console.log(pantalla, residuo);
+  imprimirValores();
+}
+function comma() {
+  var hasDecimals = Math.abs(screenValue - Math.floor(screenValue)) > 0;
+
+  if (!hasDecimals) {
+    hasComma = true;
+  }
 }
 
 function igual() {
@@ -74,7 +82,7 @@ function igual() {
   residuo = 0;
   accion = "";
   esResultado = true;
-  console.log(pantalla, residuo);
+  imprimirValores();
 }
 
 function resetear() {
@@ -82,5 +90,8 @@ function resetear() {
   residuo = 0;
   accion = "";
   esResultado = false;
-  console.log(pantalla);
+  imprimirValores();
+}
+function imprimirValores() {
+  document.getElementById("resultado").innerHTML = pantalla;
 }

@@ -17,8 +17,19 @@ body {
   margin-inline-end: 0px;
 }
 
-.botonesvcios {
+#residuo {
+  color: #2e5ff8;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
+
+
 .botonesvcios button:hover {
   color: white;
   background-color: #ffffff;
