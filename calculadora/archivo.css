@@ -1,98 +1,104 @@
+html,
 body {
-  font-family: "Poppins";
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  font-family: Poppins;
 }
-#c {
+* {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.calculadora {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  max-height: 650px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 60px -5px rgba(46, 95, 248, 0.3);
+}
+
+.display {
+  margin-bottom: 5px;
+}
+
+#residuo {
+  height: 40px;
+  color: #627fd8;
   font-size: 30px;
+  font-weight: 400;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 #resultado {
   color: #2e5ff8;
+  font-size: 60px;
+  font-weight: 400;
   text-align: right;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 0;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-#residuo {
-  color: #2e5ff8;
-  text-align: right;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 0;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
-
-.botonesvcios button:hover {
-  color: white;
-  background-color: #ffffff;
-  border-radius: 20px;
-}
-
-.mas-grande {
-  display: flex;
-  flex-direction: column;
-}
-
-.contenedor {
-  margin-top: 0px;
-  margin-left: 0;
+.botones {
+  flex: 1;
   display: flex;
   flex-direction: row;
 }
 
 .numeros {
   flex: 3;
-  margin-top: 0px;
   display: grid;
+  grid-gap: 20px 15px;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5px;
-  color: white;
+  margin-right: 5px;
 }
 
 .aritmetica {
   flex: 1;
-  font-size: 0px;
   display: grid;
+  grid-gap: 20px 15px;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1.5px;
-  color: white;
+  margin-left: 5px;
 }
 
-.numeros button {
-  width: 24px;
-  margin: 0 auto;
+.botones button {
+  background-color: #fff;
+  color: #2e5ff8;
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  font-size: 40px;
   font-weight: 600;
-  color: #2e5ff8;
-  background-color: white;
-  border-style: none;
-  border-radius: 20px;
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.aritmetica button {
-  width: 24px;
-  font-weight: 100;
-  color: #2e5ff8;
-  background-color: white;
-  border-style: none;
-  border-radius: 20px;
-}
-
-.numeros button:hover {
-  color: white;
+.botones button:hover {
   background-color: #2e5ff8;
-  border-radius: 20px;
+  color: #fff;
+  outline: none;
 }
-
-.aritmetica button:hover {
-  color: white;
-  background-color: #2e5ff8;
-  border-radius: 20px;
+.aritmetica button:last-child {
+  background-color: #ff6e27;
+  color: #fff;
+}
+.aritmetica button:last-child:hover,
+.aritmetica button:last-child:focus {
+  background-color: #ff5500;
+  color: #fff;
 }
