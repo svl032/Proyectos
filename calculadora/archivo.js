@@ -1,5 +1,9 @@
 var pantalla = 0;
 var residuo = 0;
+
+var valorResultadoAnterio = 0;
+var hasComma = false;
+
 var accion = "";
 var esResultado = false;
 
@@ -7,10 +11,20 @@ function numero(n) {
   if (pantalla == 0 || esResultado) {
     pantalla = n;
   } else {
-    pantalla = parseInt(pantalla + "" + n);
+    if (hasComma) {
+      pantalla = parseFloat(pantalla + "." + n, 4);
+    } else {
+      pantalla = parseFloat(pantalla + "" + n);
+    }
   }
-  esResultado = false;
 
+  hasComma = false;
+  Result = false;
+  imprimirValores();
+}
+
+function absoluto() {
+  pantalla = pantalla * -1;
   imprimirValores();
 }
 
@@ -36,7 +50,7 @@ function resta() {
   imprimirValores();
 }
 
-function multiplicacion() {
+function multiplica() {
   if (residuo != 0) {
     residuo = residuo * pantalla;
   } else {
@@ -57,8 +71,29 @@ function dividir() {
   accion = "divide";
   imprimirValores();
 }
+
+function percentage() {
+  valorResultadoAnterior = pantalla;
+
+  if (accion == "divide") {
+    pantalla = residuo / ((residuo * pantalla) / 100);
+  }
+  if (accion == "multiplica") {
+    pantalla = (residuo * pantalla) / 100;
+  }
+  if (accion == "suma") {
+    pantalla = residuo + (residuo * pantalla) / 100;
+  }
+  if (accion == "resta") {
+    pantalla = residuo - (residuo * pantalla) / 100;
+  }
+
+  hasComma = false;
+  residuo = 0;
+  imprimirValores();
+}
 function comma() {
-  var hasDecimals = Math.abs(screenValue - Math.floor(screenValue)) > 0;
+  var hasDecimals = Math.abs(pantalla - Math.floor(pantalla)) > 0;
 
   if (!hasDecimals) {
     hasComma = true;
@@ -78,7 +113,6 @@ function igual() {
   if (accion == "divide") {
     pantalla = residuo / pantalla;
   }
-
   residuo = 0;
   accion = "";
   esResultado = true;

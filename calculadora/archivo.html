@@ -11,13 +11,16 @@
 
   <body>
     <div class="mas-grande">
-      <h1 id="resultado">0</h1>
-      <h1 id="residuo"></h1>
+      <div class="display">
+        <h4 id="residuo">0</h4>
+        <h1 id="resultado">0</h1>
+      </div>
 
       <div class="contenedor">
         <div class="numeros">
-          <button id="c" onclick="resetear()">c</button>
-          <button class="botonesvacios"></button>
+          <button onclick="resetear()">C</button>
+          <button onclick="absoluto()">+/-</button>
+          <button onclick="percentage()">%</button>
           <button onclick="numero(7)">7</button>
           <button onclick="numero(8)">8</button>
           <button onclick="numero(9)">9</button>
@@ -29,13 +32,12 @@
           <button onclick="numero(3)">3</button>
           <button onclick="numero(0)">0</button>
           <div></div>
-          <div></div>
           <button onclick="comma()">,</button>
         </div>
 
         <div class="aritmetica">
           <button onclick="dividir()">/</button>
-          <button onclick="multiplicacion()">x</button>
+          <button onclick="multiplica()">x</button>
           <button onclick="resta()">-</button>
           <button onclick="suma()">+</button>
           <button onclick="igual()">=</button>
